@@ -4,7 +4,7 @@
   "description": "Build chain for blog examples",
   "scripts": {
     "dev": "webpack --watch --config webpack.dev.js",
-    "serve": "python3 -m http.server",
+    "serve": "python3 -m http.server 3000",
     "build": "webpack --config webpack.build.js",
     "format": "prettier --write \"src/**/*.js\""
   },

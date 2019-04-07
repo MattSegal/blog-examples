@@ -4,6 +4,8 @@ const webpack = require('webpack')
 module.exports = {
   entry: {
     'file-drop': path.resolve(__dirname, 'src/file-drop/index.js'),
+    'route-parameters': path.resolve(__dirname, 'src/route-parameters/index.js'),
+    'named-routes': path.resolve(__dirname, 'src/named-routes/index.js'),
   },
   output: {
     path: __dirname + '/public',
