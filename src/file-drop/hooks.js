@@ -27,7 +27,12 @@ export const useFileDrop = onDropFiles => {
     ref.current.click()
   }
   const HiddenInput = () => (
-    <input type="file" style={{ display: 'none' }} onChange={onChange} ref={ref} />
+    <input
+      type="file"
+      style={{ display: 'none' }}
+      onChange={onChange}
+      ref={ref}
+    />
   )
   const DropBox = props => (
     <div

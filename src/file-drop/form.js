@@ -11,7 +11,9 @@ export const UploadForm = ({ onUpload }) => {
       <DropBox className={`upload-box ${drag ? 'drag' : ''}`}>
         {!drag && <div>Drag and drop files to upload.</div>}
       </DropBox>
-      <Button primary onClick={onClick}>Upload file</Button>
+      <Button primary onClick={onClick}>
+        Upload file
+      </Button>
     </Segment>
   )
 }

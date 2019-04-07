@@ -11,27 +11,29 @@ const ROUTES = [
   {
     path: '/about',
     view: 'AboutView',
-    name: 'ABOUT'
+    name: 'ABOUT',
   },
   {
     path: '/dashboard',
     view: 'DashboardView',
-    name: 'DASHBOARD'
+    name: 'DASHBOARD',
   },
   {
     path: '/user/:userId/profile',
     view: 'ProfileView',
-    name: 'PROFILE'
+    name: 'PROFILE',
   },
   {
     path: '/',
     view: 'HomeView',
-    name: 'HOME'
+    name: 'HOME',
   },
 ]
 
-export const ROUTE_NAMES = ROUTES
-  .reduce((obj, { path, name }) => ({ ...obj, [name]: path }), {})
+export const ROUTE_NAMES = ROUTES.reduce(
+  (obj, { path, name }) => ({ ...obj, [name]: path }),
+  {}
+)
 
 export const buildRoutes = Views => () => (
   <Switch>

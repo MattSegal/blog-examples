@@ -10,7 +10,6 @@ const App = () => (
   </Container>
 )
 
-const onUpload = file =>
-  alert(file.name)
+const onUpload = file => alert(file.name)
 
 ReactDOM.render(<App />, document.getElementById('app'))
