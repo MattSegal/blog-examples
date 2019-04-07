@@ -6,6 +6,7 @@ const baseConfig = require('./webpack.base.js')
 
 module.exports = {
   ...baseConfig,
+  mode: 'production',
   optimization: {
     minimizer: [new TerserPlugin()],
   },
