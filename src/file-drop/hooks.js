@@ -1,10 +1,9 @@
 import React, { useRef, useState } from 'react'
 
-export const useFileDrop = onDropFiles => {
+export const useFileDrop = onUpload => {
   const ref = useRef(null)
   const [drag, setDrag] = useState(false)
   const onDragOver = val => e => {
-    e.stopPropagation()
     e.preventDefault()
     setDrag(val)
   }
@@ -12,15 +11,14 @@ export const useFileDrop = onDropFiles => {
     e.stopPropagation()
     e.preventDefault()
     if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
-      onDropFiles(e.dataTransfer.files[0])
+      onUpload(e.dataTransfer.files[0])
     }
     setDrag(false)
   }
   const onChange = e => {
     const files = e.target.files
     if (files.length > 0) {
-      onDropFiles(files[0])
-      e.target.value = null
+      onUpload(files[0])
     }
   }
   const onClick = () => {
