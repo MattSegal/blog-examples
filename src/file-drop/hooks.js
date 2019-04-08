@@ -36,7 +36,9 @@ export const useFileDrop = onDropFiles => {
       onDragOver={onDragOver(true)}
       onDrop={onDrop}
       {...props}
-    />
+    >
+      {!drag && props.children}
+    </div>
   )
   return {
     DropBox,
