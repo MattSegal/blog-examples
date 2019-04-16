@@ -1,9 +1,6 @@
-a {
-  color: $primary;
-  text-decoration: none;
-  &:visited {
-    color: $primary;
-  }
+.container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 // Components (buttons, inputs);

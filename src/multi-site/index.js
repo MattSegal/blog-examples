@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import { Container } from 'semantic-ui-react'
 import { HashRouter, Switch, Link, Route } from 'react-router-dom'
 
 import { Button, Card } from './components'
@@ -13,9 +12,9 @@ const SITES = [
   { theme: 'serious', path: '/'},
 ]
 
-const Site = theme => (
+const Site = ({ theme }) => (
   <div className={`${theme}-site`}>
-    <Container text>
+    <div className="container">
       <Card fancy>
         <h1 style={{ textAlign: 'center' }}>
           Welcome to my site
@@ -24,10 +23,10 @@ const Site = theme => (
       <Card>
         <p>Don't like it?</p>
         <Link to={theme === 'serious' ? '/fancy' : '/serious'}>
-          <Button>Go somewhere else</Button>
+          <Button>Change sites</Button>
         </Link>
       </Card>
-    </Container>
+    </div>
   </div>
 )
 
