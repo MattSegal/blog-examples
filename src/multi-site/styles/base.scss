@@ -1,0 +1,10 @@
+a {
+  color: $primary;
+  text-decoration: none;
+  &:visited {
+    color: $primary;
+  }
+}
+
+// Components (buttons, inputs);
+@import 'components/index.scss';

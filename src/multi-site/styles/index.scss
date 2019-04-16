@@ -1,0 +1,22 @@
+// Variables, globals;
+@import 'variables/index.scss';
+
+body {
+  // Whatever non theme-specific styles you have.
+}
+
+.fancy-site {
+  @import 'themes/fancy';
+  color: $text-color;
+  font-family: $font-family;
+  // All themable styles;
+  @import 'base';
+}
+
+.serious-site {
+  @import 'themes/serious';
+  color: $text-color;
+  font-family: $font-family;
+  // All themable styles;
+  @import 'base';
+}

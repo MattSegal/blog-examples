@@ -6,6 +6,7 @@ module.exports = {
     'file-drop': path.resolve(__dirname, 'src/file-drop/index.js'),
     'route-parameters': path.resolve(__dirname, 'src/route-parameters/index.js'),
     'named-routes': path.resolve(__dirname, 'src/named-routes/index.js'),
+    'multi-site': path.resolve(__dirname, 'src/multi-site/index.js'),
   },
   output: {
     path: __dirname + '/public',
@@ -17,6 +18,14 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       },
     ]
   },
